@@ -1,13 +1,13 @@
 # BASIC CLI COMMAND
 
-## DOCKER COMMAND
+## <span style ="color:#87CFEB">DOCKER COMMAND</span>
 ### Login to The Container
 ```
 docker exec -it <container_name> bash
 ```
 it - interactive tty where -i keep it interactive and -t Open a terminal
 
-## TOPICS
+## <span style ="color:#87CFEB">TOPICS</span>
 ### CREATE TOPICS
 ```
 kafka-topics --create --topic test-topic --replication-factor 1 --partitions 4 --bootstrap-server kafka1:19092
@@ -26,7 +26,7 @@ kafka-topics --bootstrap-server kafka1:19092 \
 --alter --topic test-topic --partitions 40
 ```
 
-## PRODUCERS
+## <span style ="color:#87CFEB">PRODUCERS</span>
 ### Without Key
 ```
 kafka-console-producer --bootstrap-server kafka1:19092 \
@@ -39,7 +39,7 @@ kafka-console-producer --bootstrap-server kafka1:19092 \
 --property "key.separator=-" --property "parse.key=true"
 ```
 
-## CONSUMERS
+## <span style ="color:#87CFEB">CONSUMERS</span>
 ### Without Key
 ```
 kafka-console-consumer --bootstrap-server kafka1:19092 \
