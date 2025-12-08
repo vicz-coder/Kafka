@@ -6,7 +6,10 @@
 docker exec -it <container_name> bash
 ```
 it - interactive tty where -i keep it interactive and -t Open a terminal
-
+### Stop all running container
+```
+docker stop $(docker ps -q)
+```
 ## <span style ="color:#87CFEB">TOPICS</span>
 ### CREATE TOPICS
 ```
@@ -19,6 +22,10 @@ kafka-topics --delete --topic test-topic --bootstrap-server kafka1:19092
 ### LIST TOPICS
 ```
 kafka-topics --bootstrap-server kafka1:19092 --list
+```
+### DESCRIBE TOPICS
+```
+kafka-topics --bootstrap-server kafka1:19092 --describe
 ```
 ### ALTER TOPICS
 ```
