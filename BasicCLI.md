@@ -26,6 +26,8 @@ kafka-topics --bootstrap-server kafka1:19092 \
 --alter --topic test-topic --partitions 40
 ```
 
+
+
 ## <span style ="color:#87CFEB">PRODUCERS</span>
 ### Without Key
 ```
@@ -54,4 +56,36 @@ kafka-console-consumer --bootstrap-server kafka1:19092 \
                        --property "key.separator= - " --property "print.key=true"
 ```
 
+## <span style ="color:#87CFEB">COMMIT LOG & RETENTION PERIOD</span>
+### Commit Log
+```
+docker exec -it kafka1 bash
+```
+```
+cd /etc/kafka/
+```
+```
+ls
+```
+```
+cat server.properties
+```
 
+### Log Files
+```
+docker exec -it kafka1 bash
+```
+```
+cd /var/lib/kafka/data/
+```
+```
+ls
+```
+```
+cat <Log File>
+```
+## <span style ="color:#87CFEB">KAFKA CLUSTER</span>
+Run this command to spin up kafka cluster with 3 brokers
+```
+docker-compose -f docker-compose-multi-broker.yml up
+```
